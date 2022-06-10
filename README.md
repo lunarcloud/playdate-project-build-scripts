@@ -19,7 +19,7 @@ Options:
 --quiet                         Don't use verbose flags.
 --detach                        Launch Simulator detached from this script (don't wait for it to exit).
 -k, --skip-unknown              When building, skip unrecognized files instead of copying them to the pdx folder.
--cb                             Clean and Build. Don't run.
+-cb                             Clean and Build. Don't run. This is the default behavior.
 -cbr                            Clean, Build, and Run. Due to defaults, same as just -r,--run
 -h, --help                      Display this help message.
 ```

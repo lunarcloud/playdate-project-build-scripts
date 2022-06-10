@@ -46,16 +46,16 @@ GOTO AfterRun
     echo:
     echo Usage:     build.bat [options]
     echo Options:
-    echo -[n]c, --[no-]clean             Clean, i.e. delete, the Output.pdx first (default), or don't."
-    echo -[n]b, --[no-]build             Build the sources into the Output.pdx (default), or don't."
-    echo -[n]r, --[no-]run               Run the output in the PlayDate Simulator, or don't (default)."
-    echo --release                       Strip Debug Symbols."
-    echo --quiet                         Don't use verbose flags."
-    echo --detach                        Launch Simulator detached from this script (don't wait for it to exit)."
-    echo -k, --skip-unknown              When building, skip unrecognized files instead of copying them to the pdx folder."
-    echo -cb                             Clean and Build. Don't run."
-    echo -cbr                            Clean, Build, and Run. Due to defaults, same as just -r,--run"
-    echo -h, --help                      Display this help message."
+    echo -[n]c, --[no-]clean             Clean, i.e. delete, the Output.pdx first (default), or don't.
+    echo -[n]b, --[no-]build             Build the sources into the Output.pdx (default), or don't.
+    echo -[n]r, --[no-]run               Run the output in the PlayDate Simulator, or don't (default).
+    echo --release                       Strip Debug Symbols.
+    echo --quiet                         Don't use verbose flags.
+    echo --detach                        Launch Simulator detached from this script (don't wait for it to exit).
+    echo -k, --skip-unknown              When building, skip unrecognized files instead of copying them to the pdx folder.
+    echo -cb                             Clean and Build. Don't run. This is the default behavior.
+    echo -cbr                            Clean, Build, and Run. Due to defaults, same as just -r,--run
+    echo -h, --help                      Display this help message.
     echo:
 
 GOTO ErrorEnd

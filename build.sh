@@ -27,7 +27,7 @@ function show_help() {
     echo -e "\t${WHT}--quiet${CLR}                         Don't use verbose flags."
     echo -e "\t${WHT}--detach${CLR}                        Launch Simulator detached from this script (don't wait for it to exit)."
     echo -e "\t${WHT}-k, --skip-unknown${CLR}              When building, skip unrecognized files instead of copying them to the pdx folder."
-    echo -e "\t${WHT}-cb${CLR}                             Clean and Build. Don't run."
+    echo -e "\t${WHT}-cb${CLR}                             Clean and Build. Don't run. This is the default behavior."
     echo -e "\t${WHT}-cbr${CLR}                            Clean, Build, and Run. Due to defaults, same as just ${WHT}-r,--run${CLR}"
     echo -e "\t${WHT}-h, --help${CLR}                      Display this help message."
     echo
