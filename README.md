@@ -1,6 +1,9 @@
 # Playdate Project Build Scripts
 Build scripts to be put at the base of a playdate project.
 
+## Requirement
+You need to set a *PLAYDATE_SDK_PATH* environment variable. 
+
 ## Files
 * `build.bat` - For Windows Users
 * `build.sh` - For Linux Users
