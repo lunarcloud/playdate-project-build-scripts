@@ -44,18 +44,18 @@ GOTO AfterRun
     echo:
     echo Build script for this PlayDate Project.
     echo:
-    echo Usage:     build.bat [options]
+    echo Usage:  [4mbuild.bat[0m [37m[options][0m
     echo Options:
-    echo -[n]c, --[no-]clean             Clean, i.e. delete, the Output.pdx first (default), or don't.
-    echo -[n]b, --[no-]build             Build the sources into the Output.pdx (default), or don't.
-    echo -[n]r, --[no-]run               Run the output in the PlayDate Simulator, or don't (default).
-    echo --release                       Strip Debug Symbols.
-    echo --quiet                         Don't use verbose flags.
-    echo --detach                        Launch Simulator detached from this script (don't wait for it to exit).
-    echo -k, --skip-unknown              When building, skip unrecognized files instead of copying them to the pdx folder.
-    echo -cb                             Clean and Build. Don't run. This is the default behavior.
-    echo -cbr                            Clean, Build, and Run. Due to defaults, same as just -r,--run
-    echo -h, --help                      Display this help message.
+    echo       [37m-[31m[n][37mc, --[31m[no-][37mclean[0m             Clean, i.e. delete, the Output.pdx first [35m(default)[0m, or don't.
+    echo       [37m-[31m[n][37mb, --[31m[no-][37mbuild[0m             Build the sources into the Output.pdx [35m(default)[0m, or don't.
+    echo       [37m-[31m[n][37mr, --[31m[no-][37mrun[0m               Run the output in the PlayDate Simulator, or don't [35m(default)[0m.
+    echo       [37m--release[0m                       Strip Debug Symbols.
+    echo       [37m--quiet[0m                         Don't use verbose flags.
+    echo       [37m--detach[0m                        Launch Simulator detached from this script (don't wait for it to exit).
+    echo       [37m-k, --skip-unknown[0m              When building, skip unrecognized files instead of copying them to the pdx folder.
+    echo       [37m-cb[0m                             Clean and Build. Don't run. This is the [35mdefault[0m behavior.
+    echo       [37m-cbr[0m                            Clean, Build, and Run. Due to defaults, same as just [37m-r,--run[0m
+    echo       [37m-h, --help[0m                      Display this help message.
     echo:
 
 GOTO ErrorEnd
