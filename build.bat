@@ -42,7 +42,7 @@ GOTO AfterRun
 
 :Help
     echo:
-    echo Build script for this PlayDate Project.
+    echo Build script for this [93mPlayDate[0m Project.
     echo:
     echo Usage:  [4mbuild.bat[0m [37m[options][0m
     echo Options:
