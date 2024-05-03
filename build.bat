@@ -17,26 +17,26 @@ GOTO GetOptions
 :CleanTask
 title PlayDate Build Script - Cleaning
 IF EXIST "%OUTPUT%" (
-    echo Deleting old Output.pdx
+    echo [33mDeleting old Output.pdx[0m
     rd /S /Q "%OUTPUT%"
 ) ELSE (
-    echo Nothing to clean, skipping.
+    echo [33mNothing to clean, skipping.[0m
 )
 GOTO AfterClean
 
 :BuildTask
 title PlayDate Build Script - Building
-echo PlayDate Compiler is building Output.pdx from Source.
+echo [33mPlayDate Compiler is building Output.pdx from Source.[0m
 "%PLAYDATE_SDK_PATH%\bin\pdc.exe" %VERBOSE_OPT_COMPILER% %STRIP_OPT% %SKIP_UNKNOWN_OPT% "%SOURCE%" "%OUTPUT%"
 GOTO AfterBuild
 
 :RunTask
 title PlayDate Build Script - Run in Simulator
-echo Running simulator.
+echo [33mRunning simulator.[0m
 IF EXIST "%OUTPUT%" (
     "%PLAYDATE_SDK_PATH%\bin\PlaydateSimulator.exe" "%OUTPUT%"
 ) ELSE (
-    echo Could not find the Output.pdx to run in the simulator!
+    echo [31mCould not find the Output.pdx to run in the simulator![33m
 )
 GOTO AfterRun
 
@@ -83,16 +83,16 @@ if not "%1" == "" GOTO GetOptions
 
 :: Sanity Checks
 IF NOT EXIST "%PLAYDATE_SDK_PATH%" (
-    echo PLAYDATE_SDK_PATH environment variable is not set! & GOTO ErrorEnd
+    echo [31mPLAYDATE_SDK_PATH environment variable is not set![0m & GOTO ErrorEnd
 )
 IF NOT EXIST "%PLAYDATE_SDK_PATH%\bin\pdc.exe" IF %BUILD%==1 (
-    echo PlayDate compiler not found at %PLAYDATE_SDK_PATH%\bin\pdc.exe & GOTO ErrorEnd
+    echo [31mPlayDate compiler not found at [37m%PLAYDATE_SDK_PATH%\bin\pdc.exe[0m & GOTO ErrorEnd
 )
 IF NOT EXIST "%PLAYDATE_SDK_PATH%/bin/PlaydateSimulator.exe" IF %RUN%==1 (
-    echo PlayDate simulator not found at %PLAYDATE_SDK_PATH%\bin\PlaydateSimulator.exe & GOTO ErrorEnd
+    echo [31mPlayDate simulator not found at [37m%PLAYDATE_SDK_PATH%\bin\PlaydateSimulator.exe[31m![0m & GOTO ErrorEnd
 )
 IF "%CLEAN%|%BUILD%|%RUN%"=="1|0|1" (
-    echo Invalid to clean and run without building! & GOTO ErrorEnd
+    echo [31mInvalid to clean and run without building![0m & GOTO ErrorEnd
 )
 
 IF %CLEAN%==1 ( GOTO CleanTask )
